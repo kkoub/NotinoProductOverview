@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="grey">#737373</color>
+    <color name="light_grey">#DFDFDF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="notino_pink">#D2225E</color>
+    <color name="notino_gray_d1">#D1D1D1</color>
+</resources>

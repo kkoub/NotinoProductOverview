@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Notino</string>
+    <string name="button_toCart">Do košíku</string>
+    <string name="homeTitle">Notino</string>
+</resources>

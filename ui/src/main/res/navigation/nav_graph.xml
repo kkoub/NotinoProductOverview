@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/notinoFragment">
+
+    <fragment
+        android:id="@+id/notinoFragment"
+        android:name="cz.koubicl.notino.ui.home.NotinoFragment"
+        android:label="NotinoFragment"
+        tools:label="NotinoFragment"
+        tools:layout="@layout/fragment_notino"/>
+
+</navigation>

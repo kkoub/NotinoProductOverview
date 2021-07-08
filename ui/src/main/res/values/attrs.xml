@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProductRatingView">
+        <attr name="drawableFilled" format="reference" />
+        <attr name="drawableEmpty" format="reference" />
+        <attr name="maxRating" format="integer" />
+        <attr name="rating" format="integer" />
+    </declare-styleable>
+</resources>

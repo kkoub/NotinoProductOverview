@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="cz.koubicl.notino.presentation.model.ProductItemModel" />
+
+        <variable
+            name="viewHolder"
+            type="cz.koubicl.notino.ui.home.NotinoProductsAdapter.ProductsViewHolder" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <FrameLayout
+            android:id="@+id/product_image_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                app:imageUrl="@{item.imageUrl}"
+                tools:src="@drawable/ic_star"/>
+
+            <ToggleButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end|top"
+                android:text=""
+                android:textOff=""
+                android:textOn=""
+                android:background="@drawable/heart_check_selector" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/product_brand"
+            style="@style/productBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{item.brandName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_image_frame"
+            tools:text="BRAND NAME" />
+
+        <TextView
+            android:id="@+id/product_name"
+            style="@style/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{item.productName}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_brand"
+            tools:text="PRODUCT NAME" />
+
+        <TextView
+            android:id="@+id/product_description"
+            style="@style/productDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{item.annotation}"
+            app:layout_constraintEnd_toEndOf="@id/product_name"
+            app:layout_constraintStart_toStartOf="@id/product_name"
+            app:layout_constraintTop_toBottomOf="@id/product_name"
+            tools:text="PRODUCT DESCRIPTION" />
+
+        <cz.koubicl.notino.ui.views.ProductRatingView
+            android:id="@+id/product_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:drawableEmpty="@drawable/ic_star_empty"
+            app:drawableFilled="@drawable/ic_star"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_description"
+            app:maxRating="5"
+            app:rating="@{item.rating}"/>
+
+        <TextView
+            android:id="@+id/product_price"
+            style="@style/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{item.price}"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_rating"
+            tools:text="58484848484 Kč"/>
+
+        <TextView
+            style="@style/cartButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_toCart"
+            android:layout_marginTop="16dp"
+            android:onClick="@{() -> viewHolder.onAddToCardClicked(item)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_price"
+            tools:text="Do košíku"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

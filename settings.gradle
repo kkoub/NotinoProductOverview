@@ -1,0 +1,6 @@
+rootProject.name = "Notino"
+include ':ui'
+include ':presentation'
+include ':domain'
+include ':remote'
+include ':common'
