@@ -6,5 +6,4 @@ import cz.koubicl.notino.presentation.viewmodel.BaseViewModel
 
 abstract class BaseFragment<VIEWMODEL : BaseViewModel, VIEWBINDING : ViewDataBinding> : DataBindingFragment<VIEWMODEL, VIEWBINDING>() {
     protected abstract val toolbarTitle: CharSequence
-
 }

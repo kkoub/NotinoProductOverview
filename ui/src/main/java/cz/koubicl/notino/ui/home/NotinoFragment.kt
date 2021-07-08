@@ -1,5 +1,7 @@
 package cz.koubicl.notino.ui.home
 
+import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import cz.koubicl.notino.R
@@ -10,7 +12,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class NotinoFragment : BaseFragment<NotinoViewModel, FragmentNotinoBinding>() {
     override val layoutResource = R.layout.fragment_notino
-    override val toolbarTitle = requireContext().getText(R.string.homeTitle) // should be done via localization keys, but im in hurry, sorry
+    override val toolbarTitle = "Notino"
 
     private val notinoViewModel by viewModel<NotinoViewModel>()
 
