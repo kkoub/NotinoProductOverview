@@ -5,15 +5,9 @@
 
     <data>
 
-        <import type="android.view.View" />
-
         <variable
             name="item"
             type="cz.koubicl.notino.presentation.model.ProductItemModel" />
-
-        <variable
-            name="viewHolder"
-            type="cz.koubicl.notino.ui.home.NotinoProductsAdapter.ProductsViewHolder" />
 
     </data>
 
