@@ -9,18 +9,14 @@ import cz.koubicl.notino.presentation.model.ProductItemModel
 class NotinoProductsAdapter(
     private val products: List<ProductItemModel>,
     private val layoutInflater: LayoutInflater,
-    private val onAddToCartListener: (ProductItemModel) -> Unit
+    private val productListener: ProductListener
 ) : RecyclerView.Adapter<NotinoProductsAdapter.ProductsViewHolder>() {
 
     inner class ProductsViewHolder(private var binding: ItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: ProductItemModel) {
             binding.item = item
-            binding.viewHolder = this
-        }
-
-        fun onAddToCardClicked(item: ProductItemModel) {
-            onAddToCartListener(item)
+            binding.addToCartButton.setOnClickListener { productListener.addToCart(item) }
         }
     }
 
