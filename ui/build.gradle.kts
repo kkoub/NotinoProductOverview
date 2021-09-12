@@ -11,7 +11,7 @@ android {
     buildToolsVersion = BuildPlugin.Versions.buildToolsVersion
 
     defaultConfig {
-        applicationId = "cz.koubicl.notino"
+        applicationId = "cz.koubicl.example"
         multiDexEnabled = true
         minSdkVersion(AndroidSdk.min)
         targetSdkVersion(AndroidSdk.target)

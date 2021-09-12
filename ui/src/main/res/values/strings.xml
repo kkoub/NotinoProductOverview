@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Notino</string>
+    <string name="app_name">Example app</string>
     <string name="button_toCart">Do košíku</string>
-    <string name="homeTitle">Notino</string>
+    <string name="homeTitle">Example app</string>
 </resources>

@@ -1,4 +1,4 @@
-rootProject.name = "Notino"
+rootProject.name = "ExampleApplication"
 include ':ui'
 include ':presentation'
 include ':domain'

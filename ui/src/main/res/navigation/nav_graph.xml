@@ -3,13 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/notinoFragment">
+    app:startDestination="@id/exampleFragment">
 
     <fragment
-        android:id="@+id/notinoFragment"
-        android:name="cz.koubicl.notino.ui.home.NotinoFragment"
-        android:label="NotinoFragment"
-        tools:label="NotinoFragment"
-        tools:layout="@layout/fragment_notino"/>
+        android:id="@+id/exampleFragment"
+        android:name="cz.koubicl.example.ui.home.ExampleFragment"
+        android:label="ExampleFragment"
+        tools:label="ExampleFragment"
+        tools:layout="@layout/fragment_example"/>
 
 </navigation>

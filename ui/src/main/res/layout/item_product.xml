@@ -7,7 +7,7 @@
 
         <variable
             name="item"
-            type="cz.koubicl.notino.presentation.model.ProductItemModel" />
+            type="cz.koubicl.example.presentation.model.ProductItemModel" />
 
     </data>
 
@@ -78,7 +78,7 @@
             app:layout_constraintTop_toBottomOf="@id/product_name"
             tools:text="PRODUCT DESCRIPTION" />
 
-        <cz.koubicl.notino.ui.views.ProductRatingView
+        <cz.koubicl.example.ui.views.ProductRatingView
             android:id="@+id/product_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
